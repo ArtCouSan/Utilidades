@@ -1,3 +1,5 @@
+// Retorno um BigDecimal de valor, pode ser alterado
+
 package br.senac.pi4.ProjetoIntegrador.controller;
 
 import java.io.BufferedReader;
@@ -65,7 +67,7 @@ public class calculoFreteCorreio {
             // pega o valor
             String value = parameters.getProperty(name);
             // adiciona com um conector (? ou &)
-            // o primeiro È ?, depois s„o &
+            // o primeiro √© ?, depois s√£o &
             urlString += (++counter == 1 ? "?" : "&") + name + "=" + value;
         }
         try {
@@ -81,7 +83,7 @@ public class calculoFreteCorreio {
             connection.setDoOutput(false);
             // conecta com a url destino
             connection.connect();
-            // abre a conex„o pra input
+            // abre a conex√£o pra input
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     connection.getInputStream()));
             // le ate o final
@@ -91,7 +93,7 @@ public class calculoFreteCorreio {
                 newData.append(s);
             }
             br.close();
-            // Prepara o XML que est· em string para executar leitura por nodes
+            // Prepara o XML que est√° em string para executar leitura por nodes
             DocumentBuilder db = DocumentBuilderFactory.newInstance()
                     .newDocumentBuilder();
             InputSource is = new InputSource();
