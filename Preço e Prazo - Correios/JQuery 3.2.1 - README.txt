@@ -1,0 +1,7 @@
+Pegar o retorno em XML
+EX:
+ $(xml).find('cServico').each(function () {
+     // No find alterar para a tag, de acordo com o site dos correios
+     var valor = $(this).find('Valor').text();
+     $("#totalCep").text("R$" + valor);
+});
